@@ -1,11 +1,11 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
 docker_image = biocontainers/fastqc
-arguments = "fastqc $(RUN)_1P.fq.gz $(RUN)_2P.fq.gz -t 4"
+arguments = "fastqc 3151_17_S11_1P.fq.gz 3151_17_S11_2P.fq.gz -t 4"
 
-output = fastqc2_$(RUN).out
-error = fastqc2_$(RUN).err
-log = fastqc2_$(RUN).log
+output = fastqc2_$(Cluster)_$(Process).out
+error = fastqc2_$(Cluster)_$(Process).err
+log = fastqc2_$(Cluster)_$(Process).log
 
 # Rules to transfer and transferring files
 transfer_executable = FALSE
@@ -13,9 +13,9 @@ should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 
 staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq
-transfer_input_files = $(staging_prefix)/$(RUN)_1P.fq.gz, $(staging_prefix)/$(RUN)_2P.fq.gz
-transfer_output_files = $(RUN)_1P_fastqc.zip, $(RUN)_2P_fastqc.zip
-transfer_output_remaps = "$(RUN)_1P_fastqc.zip = $(staging_prefix)/$(RUN)_1P_fastqc.zip; $(RUN)_2P_fastqc.zip = $(staging_prefix)/$(RUN)_2P_fastqc.zip"
+transfer_input_files = $(staging_prefix)/3151_17_S11_1P.fq.gz, $(staging_prefix)/3151_17_S11_2P.fq.gz
+transfer_output_files = 3151_17_S11_1P_fastqc.zip, 3151_17_S11_2P_fastqc.zip
+transfer_output_remaps = "3151_17_S11_1P_fastqc.zip = $(staging_prefix)/3151_17_S11_1P_fastqc.zip; 3151_17_S11_2P_fastqc.zip = $(staging_prefix)/3151_17_S11_2P_fastqc.zip"
 
 # Resource request and Queue job
 requirements = (Target.HasCHTCStaging==TRUE)
