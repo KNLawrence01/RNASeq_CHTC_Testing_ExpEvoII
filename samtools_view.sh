@@ -1,4 +1,4 @@
 #!/bin/bash
 
-samtools index $1.sam 
-samtools view -bhSu $1.sam > $1.bam
+samtools index 3151_17_S11.sam
+samtools view -bhSu 3151_17_S11.sam > 3151_17_S11.bam
