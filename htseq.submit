@@ -1,7 +1,7 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
 docker_image = biocontainers/htseq
-executable = htseq.sh
+executable = htseq_1.sh
 
 output = htseq_$(Cluster)_$(Process).out
 error = htseq_$(Cluster)_$(Process).err
