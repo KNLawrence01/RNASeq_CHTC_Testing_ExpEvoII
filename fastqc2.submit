@@ -1,6 +1,6 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
-docker_image = biocontainers/fastqc
+docker_image = staphb/fastqc
 arguments = "fastqc 3151_17_S11_1P.fq.gz 3151_17_S11_2P.fq.gz -t 4"
 
 output = fastqc2_$(Cluster)_$(Process).out
