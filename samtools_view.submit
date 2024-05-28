@@ -1,7 +1,7 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
-docker_image = biocontainers/samtools
-executable = samtools_view.sh
+docker_image = staphb/samtools
+executable = samtools_view_1.sh
 
 output = samtools_view_$(Cluster)_$(Process).out
 error = samtools_view_$(Cluster)_$(Process).err
