@@ -14,8 +14,10 @@ when_to_transfer_output = ON_EXIT
 
 staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq
 transfer_input_files = $(staging_prefix)/3151_17_S11_R1_001.fastq.gz , $(staging_prefix)/3151_17_S11_R2_001.fastq.gz
-transfer_output_files = 3151_17_S11_R1_001.fastqc.zip, 3151_17_S11_R2_001.fastqc.zip
-transfer_output_remaps = "3151_17_S11_R1_001.fastqc.zip = $(staging_prefix)/3151_17_S11_R1_001.fastqc.zip; 3151_17_S11_R2_001.fastqc.zip = $(staging_prefix)/3151_17_S11_R2_001.fastqc.zip"
+
+#ERROR will have to meet with CHTC to figure out
+#transfer_output_files = 3151_17_S11_R1_001.fastqc.zip, 3151_17_S11_R2_001.fastqc.zip
+#transfer_output_remaps = "3151_17_S11_R1_001.fastqc.zip = $(staging_prefix)/3151_17_S11_R1_001.fastqc.zip; 3151_17_S11_R2_001.fastqc.zip = $(staging_prefix)/3151_17_S11_R2_001.fastqc.zip"
 
 # Resource request and Queue job
 requirements = (Target.HasCHTCStaging==TRUE)
