@@ -1,7 +1,7 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
-docker_image = biocontainers/bwa
-executable = bwaMEM.sh
+docker_image = staphb/bwa
+executable = bwaMEM_1.sh
 
 output = bwaMEM_$(Cluster)_$(Process).out
 error = bwaMEM_$(Cluster)_$(Process).err
