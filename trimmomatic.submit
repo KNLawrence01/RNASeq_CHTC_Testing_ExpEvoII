@@ -1,7 +1,7 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
-docker_image = biocontainers/trimmomatic
-executable = trimmomatic.sh
+docker_image = staphb/trimmomatic
+executable = trimmomatic_1.sh
 
 output = trimmomatic_$(Cluster)_$(Process).out
 error = trimmomatic_$(Cluster)_$(Process).err
