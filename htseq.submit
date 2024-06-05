@@ -1,6 +1,6 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
-docker_image = biocontainers/htseq
+docker_image = jowkar/htseq_samtools
 executable = htseq_1.sh
 
 output = htseq_$(Cluster)_$(Process).out
